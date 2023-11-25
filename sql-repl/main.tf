@@ -216,11 +216,11 @@ module "traffic_manager_endpoint" {
   endpoint1_name                        = var.endpoint1_name
   traffic_manager_profile_id            = module.traffic_manager_profile.traffic_manager_profile_id
   weight1                               = var.weight1
-  vm1_pip                               = module.primary_vnet.vm1_pip
+  vm1_pip                               = var.vm1_pip
 
   endpoint2_name                        = var.endpoint2_name
   weight2                               = var.weight2
-  vm2_pip                               = module.secondary_vnet.vm2_pip
+  vm2_pip                               = var.vm2_pip
 
 
 }
