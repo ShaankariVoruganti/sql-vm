@@ -98,7 +98,7 @@ module "primary_vms"{
   primary_vm                            = var.primary_vm
   primary_location                      = var.primary_location
   primary_resource_group_name           = var.primary_resource_group_name
-  network_if_id1                        = module.primary_vnet.network_if_id1
+  network_if_id1                        = [module.primary_vnet.network_if_id1]
   primary_vm_size                       = var.primary_vm_size
   image_publisher                       = var.image_publisher
   image_offer                           = var.image_offer
@@ -124,7 +124,7 @@ module "secondary_vms"{
   secondary_vm                          = var.secondary_vm
   secondary_location                    = var.secondary_location
   secondary_resource_group_name         = var.secondary_resource_group_name
-  network_if_id2                        = module.secondary_vnet.network_if_id2
+  network_if_id2                        = [module.secondary_vnet.network_if_id2]
   secondary_vm_size                     = var.secondary_vm_size
   image_publisher                       = var.image_publisher
   image_offer                           = var.image_offer
