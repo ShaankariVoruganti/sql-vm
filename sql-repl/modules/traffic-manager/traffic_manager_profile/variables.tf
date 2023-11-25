@@ -1,6 +1,6 @@
 variable traffic_manager{}
 variable routing_method{}
-varaible dns_name{}
+variable dns_name{}
 variable ttl{}
 variable tm_protocol{}
 variable tm_port{}
