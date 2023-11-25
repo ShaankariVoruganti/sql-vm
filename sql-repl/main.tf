@@ -197,7 +197,7 @@ module "ManagementGroup" {
 module "traffic_manager_profile" {
   source                                = "./modules/traffic-manager/traffic_manager_profile"
   traffic_manager                       = var.traffic_manager
-  primary_resource_group_name           = module.primary_resource_group.primary_resource_group_name
+  primary_resource_group_name           = module.resource_group.primary_resource_group_name
   routing_method                        = var.routing_method
   dns_name                              = var.dns_name
   ttl                                   = var.ttl
