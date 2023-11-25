@@ -6,7 +6,7 @@ module "resource_group" {
 
 module "primary_vnet" {
   source                      = "./modules/network/primary_vnet"
-  primary_resource_group_name = module.primary_resource_group.primary_resource_group_name
+  primary_resource_group_name = module.resource_group.primary_resource_group.primary_resource_group_name
   primary_location            = var.primary_location
   primary_vnet                = var.primary_vnet
   primary_vnet_addr           = var.primary_vnet_addr
@@ -82,7 +82,7 @@ module "primary_peering"{
   primary_resource_group_name   = module.resource_group.primary_resource_group_name
   primary_vnet_name             = var.primary_vnet
   primary_peer_name             = var.primary_peer_name
-  secondary_vnet_id             = module.dr_networking.secondary_vnet_id
+  secondary_vnet_id             = module.secondary_vnet.secondary_vnet_id
 }
 
 module "secondary_peering"{
@@ -90,7 +90,7 @@ module "secondary_peering"{
   secondary_resource_group_name         = module.secondary_resource_group.secondary_resource_group_name
   secondary_vnet_name                   = var.secondary_vnet
   secondary_peer_name                   = var.secondary_peer_name
-  primary_vnet_id                       = module.networking.primary_vnet_id
+  primary_vnet_id                       = module.primary_vnet.primary_vnet_id
 }
 
 module "primary_vms"{
