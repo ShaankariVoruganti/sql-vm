@@ -5,7 +5,7 @@ resource "azurerm_traffic_manager_azure_endpoint" "example" {
   target_resource_id = var.vm1_pip
 }
 
-resource "azurerm_traffic_manager_azure_endpoint" "example" {
+resource "azurerm_traffic_manager_azure_endpoint" "example2" {
   name               = var.endpoint2_name
   profile_id         = var.traffic_manager_profile_id
   weight             = var.weight2
