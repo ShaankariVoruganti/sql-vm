@@ -195,7 +195,8 @@ module "ManagementGroup" {
 }
 
 module "traffic_manager_profile" {
-  traffic_manager                      = var.traffic_manager
+  source                                = "./modules/traffic_manager/traffic_manager_profile"
+  traffic_manager                       = var.traffic_manager
   primary_resource_group_name           = module.primary_resource_group.primary_resource_group_name
   routing_method                        = var.routing_method
   dns_name                              = var.dns_name
@@ -211,6 +212,7 @@ module "traffic_manager_profile" {
 }
 
 module "traffic_manager_endpoint" {
+  source                                = "./modules/traffic_manager/traffic_manager_endpoint"
   endpoint1_name                        = var.endpoint1_name
   traffic_manager_profile_id            = module.traffic_manager_profile.traffic_manager_profile_id
   weight1                               = var.weight1
