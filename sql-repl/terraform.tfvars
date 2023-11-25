@@ -46,7 +46,7 @@ nic2                                   = "test-NIC2"
 ipconfig2                              = "ip2"
 private_ip_alloc2                      = "Dynamic"
 vm2_pip_alloc                          = "Dynamic"
-domain_name2                           = "vm2_dns"
+domain_name2                           = "vm2-dns"
 
 primary_vm                             = "vm-1"
 primary_vm_size                        = "Standard_D2S_v3"
