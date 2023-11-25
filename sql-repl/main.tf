@@ -6,7 +6,7 @@ module "resource_group" {
 
 module "primary_vnet" {
   source                      = "./modules/network/primary_vnet"
-  primary_resource_group_name = module.resource_group.primary_resource_group.primary_resource_group_name
+  primary_resource_group_name = module.resource_group.primary_resource_group_name
   primary_location            = var.primary_location
   primary_vnet                = var.primary_vnet
   primary_vnet_addr           = var.primary_vnet_addr
