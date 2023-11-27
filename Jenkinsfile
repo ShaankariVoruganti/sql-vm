@@ -4,7 +4,7 @@ pipeline {
    stages {
        stage('git clone'){
       steps{
-        sh 'git clone https://github.com/ShaankariVoruganti/sql-vm/sql-repl'
+        sh 'git clone https://github.com/ShaankariVoruganti/sql-vm'
       }
     }
         stage('Clear destination') {
