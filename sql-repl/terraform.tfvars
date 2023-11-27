@@ -103,10 +103,11 @@ secret4_name                           =  "subscriptionID"
 secret4_value                          =  "0fab4497-0c13-457e-9f55-f42ee26e4303"
 object_id                              =  "09d881b5-dd74-46e0-9204-11a597cd180f"
 
-
+tf_resource_group_name                 = "tf_rg"
+tf_location                            = "central-us"
 traffic_manager                        =  "stardust"
 routing_method                         =  "Performance"
-dns_name                               =  "usecase.net"
+dns_name                               =  "usecase"
 ttl                                    =  100
 tm_protocol                            =  "HTTP"
 tm_port                                =  80
