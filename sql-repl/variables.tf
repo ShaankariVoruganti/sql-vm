@@ -247,6 +247,9 @@ variable "object_id" {
     type = string
 }
 
+variable tf_resource_group_name{}
+variable tf_location{}
+
 variable traffic_manager{}
 variable routing_method{}
 variable dns_name{}
