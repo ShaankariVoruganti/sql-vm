@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+        environment {
+        TF_VAR_client_id = credentials('azure-client-id')
+        TF_VAR_client_secret = credentials('azure-client-secret')
+        TF_VAR_tenant_id = '252cffbe-a714-4696-a12b-42b36c3ba3b6'
+        TF_VAR_subscription_id = '0fab4497-0c13-457e-9f55-f42ee26e4303'
+    }
+
    stages {
        stage('git clone'){
       steps{
