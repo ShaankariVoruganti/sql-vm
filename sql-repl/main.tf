@@ -193,11 +193,15 @@ module "ManagementGroup" {
   source                                = "./modules/ManagementGroup"
   display_name                          = var.display_name
 }
-
+module "traffic_manager_rg"{
+  source                        = "./modules/resource-groups/traffic_manager_rg"
+  tf_resource_group_name        = var.secondary_resource_group_name
+  secondary_location            = var.secondary_location
+} 
 module "traffic_manager_profile" {
   source                                = "./modules/traffic-manager/traffic_manager_profile"
   traffic_manager                       = var.traffic_manager
-  primary_resource_group_name           = module.resource_group.primary_resource_group_name
+  primary_resource_group_name           = module.traffic_manager_rg.traffic_manager_rg_name
   routing_method                        = var.routing_method
   dns_name                              = var.dns_name
   ttl                                   = var.ttl
