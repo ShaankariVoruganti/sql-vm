@@ -1,5 +1,5 @@
 primary_resource_group_name            =  "primary-rg"
-primary_location                       =  "west europe"
+primary_location                       =  "UK South"
 primary_vnet                           =  "primary-vnet"
 primary_vnet_addr                      =  ["10.0.0.0/16"]
 primary_subnet                         =  "primary-subnet"
