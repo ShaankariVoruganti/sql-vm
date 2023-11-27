@@ -7,3 +7,6 @@ output "secondary_subnet_id" {
 output "network_if_id2" {
   value = azurerm_network_interface.sqlnic.id
 }
+output "pip2_id"{
+  value = azurerm_public_ip.vm.id
+}
